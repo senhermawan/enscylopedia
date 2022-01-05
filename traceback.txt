@@ -1,0 +1,66 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/screens.rpy", line 379, in execute
+    screen EnsiklopediaDetil(detil):
+  File "game/screens.rpy", line 379, in execute
+    screen EnsiklopediaDetil(detil):
+  File "game/screens.rpy", line 382, in execute
+    frame:
+  File "game/screens.rpy", line 385, in execute
+    add "data/[detil[0]]/"+detil[1][page] zoom 0.75
+Exception: DynamicImage u'data/[detil[0]]/1.png': could not find image. (u'data/02Chapter 0/1.png')
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 379, in execute
+    screen EnsiklopediaDetil(detil):
+  File "game/screens.rpy", line 379, in execute
+    screen EnsiklopediaDetil(detil):
+  File "game/screens.rpy", line 382, in execute
+    frame:
+  File "game/screens.rpy", line 385, in execute
+    add "data/[detil[0]]/"+detil[1][page] zoom 0.75
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/image.py", line 577, in _scope
+    return self.find_target(scope, update)
+  File "/home/nes/Downloads/renpy-7.4.11-sdk/renpy/display/image.py", line 652, in find_target
+    raise Exception(error)
+Exception: DynamicImage u'data/[detil[0]]/1.png': could not find image. (u'data/02Chapter 0/1.png')
+
+Linux-5.13.19-2-MANJARO-x86_64-with-glibc2.2.5
+Ren'Py 7.4.11.2266
+enscylopedia 1.0
+Thu Dec 23 16:07:19 2021
